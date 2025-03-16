@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="km">
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Form</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+            background-color: #f1f1f1;
+        }
+
+        form {
+            display: inline-block;
+            text-align: left;
+            padding: 25px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #ffffff;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+            width: 350px;
+            transition: all 0.7s ease-in-out;
+        }
+
+        form:hover {
+            transform: scale(1.05);
+        }
+
+        h3 {
+            color: #4CAF50;
+            margin-bottom: 30px;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+            background-color: #fafafa;
+            transition: all 0.3s;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            border-color: #4CAF50;
+            background-color: #f1f1f1;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #47c04b;
+            color: white;
+            border: none;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        .input-container {
+            margin-bottom: 15px;
+        }
+
+        /* Flexbox for the footer section with two columns */
+        .k1111 {
+            background-color: rgb(207, 200, 200);
+            width: 100%;
+            height: 200px;
+            display: flex;
+            justify-content: space-between; /* Creates space between the columns */
+            padding: 10px;
+        }
+
+        .k1111 .column {
+            width: 48%; /* Each column will take up 48% of the available space */
+            background-color: white;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+    </style>
+</head>
+
+<body>
+        <div style="width: 100%;height: 50px;background-color: #14098a;" class="row">
+            <marquee style="font-family: 'khmer os battambang';font-size: x-large;color: white;">សាលាបឋមសិក្សាត្រពាំងស្លា</marquee>
+        </div>
+    
+    <h3 style="font-family: khmer os battambang;">សូមបំពេញខាងក្រោមដើម្បីចុះឈ្មោះ</h3>
+
+    <form onsubmit="return submitForm()">
+        <div class="input-container">
+            <label for="name">ឈ្មោះសិស្ស (Student's Name):</label>
+            <input type="text" id="name" placeholder="Enter student's name" required>
+        </div>
+
+        <div class="input-container">
+            <label for="dob">ថ្ងៃខែឆ្នាំកំណើត (Date of Birth):</label>
+            <input type="text" id="dob" placeholder="សូមសរសេរថ្ងៃទី,ខែ,ឆ្នាំកំណើតរបស់អ្នក" required>
+        </div>
+
+        <div class="input-container">
+            <label for="placeOfBirth">ទីកន្លែងកំណើត (Place of Birth):</label>
+            <input type="text" id="placeOfBirth" placeholder="Enter place of birth" required>
+        </div>
+
+        <div class="input-container">
+            <label for="gender">ភេទ (Gender):</label>
+            <input type="text" id="gender" placeholder="សូមសរសេរភេទរបស់អ្នក" required>
+        </div>
+        <!-- New Field for Previous Grade -->
+        <div class="input-container">
+            <label for="grade">ឆ្នាំមុនជាសិស្សរៀនថ្នាក់ទី:</label>
+            <input type="text" id="grade" placeholder="សូមបញ្ចូលថ្នាក់រៀន" required>
+        </div>
+        <div class="input-container">
+            <label for="fatherName">ឈ្មោះឪពុក (Father's Name):</label>
+            <input type="text" id="fatherName" placeholder="Enter father's name" required>
+        </div>
+
+        <div class="input-container">
+            <label for="fatherOccupation">មុខរបរឪពុក (Father's Occupation):</label>
+            <input type="text" id="fatherOccupation" placeholder="Enter father's occupation" required>
+        </div>
+
+        <div class="input-container">
+            <label for="motherName">ឈ្មោះម្តាយ (Mother's Name):</label>
+            <input type="text" id="motherName" placeholder="Enter mother's name" required>
+        </div>
+
+        <div class="input-container">
+            <label for="motherOccupation">មុខរបរម្តាយ (Mother's Occupation):</label>
+            <input type="text" id="motherOccupation" placeholder="Enter mother's occupation" required>
+        </div>
+
+        <div class="input-container">
+            <label for="currentAddress">ទីលំនៅបច្ចុប្បន្ន (Current Address):</label>
+            <textarea id="currentAddress" placeholder="Enter current address" rows="3" required></textarea>
+        </div>
+
+        <div class="input-container">
+            <label for="contactPhone">លេខទូរស័ព្ទទំនាក់ទំនង (Contact Phone Number):</label>
+            <input type="tel" id="contactPhone" placeholder="Enter phone number" pattern="[0-9]{10}" required>
+        </div>
+
+        <button type="submit">ចុះឈ្មោះ</button>
+    </form>
+
+    <script>
+        function submitForm() {
+            alert("លោកអ្នកចុះឈ្មោះបានដោយជោគជ័យ! លោកអ្នកអាច មកចូលរៀនបានចាប់ពីថ្ងៃទី០២ខែមករាឆ្នាំ២០២៥ តទៅ។");
+            return false;
+        }
+    </script><br><br><br>
+
+</body>
+
+</html>
